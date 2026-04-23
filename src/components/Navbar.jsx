@@ -5,7 +5,7 @@ const Navbar = ({ data }) => {
     <nav className="navbar">
       <div className="container nav-container">
         <a href="#home" className="logo-link">
-          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Highres Logo" className="logo-img" />
+          <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="Highres Logo" className="logo-img" />
         </a>
         <ul className="nav-links">
           <li><a href="#work">{data.work}</a></li>

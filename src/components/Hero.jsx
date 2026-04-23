@@ -17,7 +17,7 @@ const Hero = ({ data }) => {
       <div className="hero-overlay"></div>
       
       <div className="hero-content fade-in-up">
-        <img src={`${import.meta.env.BASE_URL}icon.png`} alt="Highres Icon" className="hero-icon" />
+        <img src={`${import.meta.env.BASE_URL}icon.svg`} alt="Highres Icon" className="hero-icon" />
         <h1 className="hero-title">{data.title_start} <span className="accent">{data.title_accent}</span> {data.title_end}</h1>
         <p className="hero-subtitle">{data.subtitle}</p>
         <a href="#work" className="btn-primary">{data.cta_button}</a>
