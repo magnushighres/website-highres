@@ -25,7 +25,7 @@ const About = ({ data }) => {
           </div>
           <div className="about-image">
             <img 
-              src="/about.png" 
+              src={`${import.meta.env.BASE_URL}about.png`} 
               alt="Creative Vision" 
               style={{width: '100%', borderRadius: '12px', filter: 'grayscale(50%) contrast(1.2)'}}
               loading="lazy"

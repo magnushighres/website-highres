@@ -13,7 +13,7 @@ const Portfolio = ({ data }) => {
         const loadedProjects = await Promise.all(
           projectFiles.map(async (filename, index) => {
             try {
-              const response = await fetch(`/projects/${filename}.json`);
+              const response = await fetch(`${import.meta.env.BASE_URL}projects/${filename}.json`);
               if (!response.ok) throw new Error('Not found');
               const data = await response.json();
               return {
@@ -21,7 +21,7 @@ const Portfolio = ({ data }) => {
                 filename: filename,
                 title: data.title,
                 category: data.subtitle,
-                image: `/projects/${filename}.png`,
+                image: `${import.meta.env.BASE_URL}projects/${filename}.png`,
                 embed_code: data.video_embed || data.vimeo_embed || data.embed
               };
             } catch (err) {
