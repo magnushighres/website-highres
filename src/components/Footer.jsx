@@ -7,7 +7,7 @@ const Footer = ({ data }) => {
     <footer className="footer">
       <div className="container">
         <a href="#home" className="logo-link">
-          <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="Highres Logo" className="logo-img-footer" />
+          <img src={`${import.meta.env.BASE_URL}logo_top.svg`} alt="Highres Logo" className="logo-img-footer" />
         </a>
         <p>&copy; {currentYear} {data.copyright}</p>
       </div>

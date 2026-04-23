@@ -1,5 +1,5 @@
 ﻿{
   "title": "Showreel",
   "subtitle": "2024",
-  "vimeo_embed": "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/793636382?autoplay=1&muted=1&loop=1&background=1&title=0&byline=0&portrait=0\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>"
+  "vimeo_embed": "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/793636382?autoplay=1&muted=0&loop=1&controls=0&title=0&byline=0&portrait=0&playsinline=1\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>"
 }
