@@ -22,6 +22,7 @@
 .logo-link {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .logo-img {
@@ -209,7 +210,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   display: flex;
@@ -424,14 +425,18 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  width: 100%;
 }
 
 .form-group {
   position: relative;
+  width: 100%;
 }
 
 .form-control {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 1rem;
   background-color: var(--bg-card);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -487,6 +492,9 @@ textarea.form-control {
   }
   .nav-links {
     display: none; /* simple mobile nav approach for now */
+  }
+  .nav-container {
+    justify-content: center;
   }
   .section-title {
     font-size: 2.5rem;

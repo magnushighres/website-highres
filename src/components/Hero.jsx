@@ -10,7 +10,6 @@ const Hero = ({ data }) => {
         loop 
         muted 
         playsInline
-        poster="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
       >
         <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4" />
       </video>

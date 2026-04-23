@@ -19,15 +19,16 @@ const Contact = ({ data }) => {
         </div>
         
         <div className="contact-form-wrapper fade-in-up" style={{animationDelay: '0.2s'}}>
-          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+          <form className="contact-form" action="https://formsubmit.co/magnus@highres.no" method="POST">
+            <input type="hidden" name="_subject" value="Ny melding fra Highres nettside!" />
             <div className="form-group">
-              <input type="text" className="form-control" placeholder={data.form_name} required />
+              <input type="text" name="navn" className="form-control" placeholder={data.form_name} required />
             </div>
             <div className="form-group">
-              <input type="email" className="form-control" placeholder={data.form_email} required />
+              <input type="email" name="epost" className="form-control" placeholder={data.form_email} required />
             </div>
             <div className="form-group">
-              <textarea className="form-control" placeholder={data.form_message} required></textarea>
+              <textarea name="melding" className="form-control" placeholder={data.form_message} required></textarea>
             </div>
             <button type="submit" className="btn-primary" style={{alignSelf: 'flex-start'}}>{data.form_button}</button>
           </form>
