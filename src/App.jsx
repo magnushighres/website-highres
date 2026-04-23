@@ -11,14 +11,30 @@ function App() {
   const [content, setContent] = useState(null);
 
   useEffect(() => {
-    fetch('/content.json')
-      .then((res) => res.json())
+    fetch(`${import.meta.env.BASE_URL}content.json`)
+      .then((res) => {
+        if (!res.ok) throw new Error('Failed to fetch content.json');
+        return res.json();
+      })
       .then((data) => setContent(data))
       .catch((err) => console.error("Could not load content.json:", err));
   }, []);
 
   if (!content) {
-    return <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#050505', color: '#fff' }}>Laster inn...</div>;
+    return (
+      <div
+        style={{
+          height: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: '#050505',
+          color: '#fff'
+        }}
+      >
+        Laster inn...
+      </div>
+    );
   }
 
   return (
