@@ -1,0 +1,58 @@
+{
+  "navbar": {
+    "work": "Prosjekter",
+    "about": "Om meg",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title_start": "Jeg skaper",
+    "title_accent": "visuelle",
+    "title_end": "opplevelser.",
+    "subtitle": "3D • Motion Design • Visuell Produksjon",
+    "cta_button": "Se prosjekter"
+  },
+  "portfolio": {
+    "title_start": "Utvalgte",
+    "title_accent": "Prosjekter"
+  },
+  "about": {
+    "heading": "Design. Bevegelse. Resultat.",
+    "paragraph_1": "Jeg er motion designer med bakgrunn i både 3D og 2D, og jobber med alt fra mindre produksjoner til større leveranser innen event, reklame og kampanjer. Jeg liker å ha kontroll på hele prosessen – fra idé og design til animasjon, lyd og ferdig leveranse.",
+    "paragraph_2": "Har jobbet i bransjen i flere år, både som frilanser og på større prosjekter, og er vant til å tilpasse meg ulike kunder og behov. Arbeidet mitt spenner fra visuelle løsninger til event og sceneshow, til kommersielle prosjekter der uttrykk og tydelig kommunikasjon er avgjørende.",
+    "paragraph_3": "Jeg er opptatt av flyt og effektivitet i arbeidet mitt, og bruker mye tid på å bygge egne verktøy og systemer som gjør at jeg kan levere raskere og mer presist. For meg handler det ikke bare om å lage noe som ser bra ut, men noe som faktisk fungerer i konteksten det skal brukes i.",
+    "signature": "- Magnus Moltzau Olsen",
+    "stats": [
+      {
+        "value": "10+",
+        "label": "Års Erfaring"
+      },
+      {
+        "value": "150+",
+        "label": "Prosjekter Levert"
+      },
+      {
+        "value": "3D",
+        "label": "Modellering & Animasjon"
+      },
+      {
+        "value": "VFX",
+        "label": "Compositing & Lyd"
+      }
+    ]
+  },
+  "contact": {
+    "heading_start": "La oss skape noe",
+    "heading_accent": "ekstraordinært.",
+    "email_label": "E-post",
+    "email_value": "magnus@highres.no",
+    "location_label": "Lokasjon",
+    "location_value": "Oslo, Norge",
+    "form_name": "Ditt navn",
+    "form_email": "Din e-post",
+    "form_message": "Fortell meg om prosjektet ditt...",
+    "form_button": "Send melding"
+  },
+  "footer": {
+    "copyright": "Highres Studio. Med enerett."
+  }
+}
