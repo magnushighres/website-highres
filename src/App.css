@@ -344,14 +344,53 @@
 }
 
 .modal-content {
-  width: min(1200px, 100%);
+  width: min(1120px, 100%);
   position: relative;
   animation: modalScaleIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-bottom: 0.95rem;
+  padding-right: 64px;
+}
+
+.modal-index {
+  color: rgba(255,255,255,0.58);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.modal-title-block {
+  text-align: right;
+}
+
+.modal-title-block h3 {
+  color: var(--accent-color);
+  font-size: clamp(2rem, 5vw, 4.2rem);
+  line-height: 0.88;
+  margin: 0;
+  text-shadow: 0 14px 42px rgba(0,0,0,0.58);
+}
+
+.modal-title-block p {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-weight: 850;
+  margin-top: 0.55rem;
+}
+
 .modal-close {
   position: absolute;
-  top: -54px;
+  top: 0;
   right: 0;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -394,26 +433,6 @@
   border: none;
 }
 
-.modal-info {
-  padding: 1.6rem 0 0;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: flex-end;
-}
-
-.modal-info h3 {
-  font-size: clamp(1.6rem, 4vw, 2.6rem);
-  color: var(--accent-color);
-}
-
-.modal-info p {
-  color: var(--text-secondary);
-  font-size: 0.82rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-weight: 800;
-}
 
 /* About Section */
 .about {
@@ -662,16 +681,20 @@ textarea.form-control {
     padding: 20px;
   }
 
+  .modal-header {
+    display: block;
+    padding-right: 50px;
+  }
+
+  .modal-title-block {
+    text-align: left;
+    margin-top: 0.55rem;
+  }
+
   .modal-close {
-    top: -46px;
     width: 38px;
     height: 38px;
     font-size: 1.5rem;
-  }
-
-  .modal-info {
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .scroll-cue {

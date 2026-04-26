@@ -95,12 +95,15 @@ const Portfolio = ({ data }) => {
       {activeProject && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={closeModal}>×</button>
-            <div className="modal-video-wrapper" dangerouslySetInnerHTML={{ __html: activeProject.embed_code }} />
-            <div className="modal-info">
-              <h3>{activeProject.title}</h3>
-              <p>{activeProject.category}</p>
+            <button className="modal-close" onClick={closeModal} aria-label="Lukk film">×</button>
+            <div className="modal-header">
+              <span className="modal-index">Film 0{activeProject.id}</span>
+              <div className="modal-title-block">
+                <h3>{activeProject.title}</h3>
+                <p>{activeProject.category}</p>
+              </div>
             </div>
+            <div className="modal-video-wrapper" dangerouslySetInnerHTML={{ __html: activeProject.embed_code }} />
           </div>
         </div>
       )}

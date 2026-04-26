@@ -20,7 +20,6 @@ const Hero = ({ data }) => {
       
       <div className="hero-content fade-in-up">
         <img src={`${import.meta.env.BASE_URL}icon.svg`} alt="Highres Icon" className="hero-icon" />
-        <div className="eyebrow">Highres Studio · Oslo</div>
         <h1 className="hero-title">{data.title_start} <span className="accent">{data.title_accent}</span> {data.title_end}</h1>
         <div className="hero-pills" aria-label="Fagområder">
           {disciplines.map((item) => <span key={item}>{item}</span>)}
