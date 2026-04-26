@@ -58,6 +58,15 @@ const Portfolio = ({ data }) => {
     setActiveProject(null);
   };
 
+  const getControlledEmbed = (embedCode = '') => {
+    if (!embedCode.includes('<video')) return embedCode;
+
+    return embedCode
+      .replace(/<video\b(?![^>]*\bcontrols\b)/i, '<video controls')
+      .replace(/<video\b([^>]*)\sautoplay\b/gi, '<video$1')
+      .replace(/<video\b([^>]*)\sloop\b/gi, '<video$1');
+  };
+
   return (
     <section className="portfolio" id="work">
       <div className="container">
@@ -103,7 +112,7 @@ const Portfolio = ({ data }) => {
                 <p>{activeProject.category}</p>
               </div>
             </div>
-            <div className="modal-video-wrapper" dangerouslySetInnerHTML={{ __html: activeProject.embed_code }} />
+            <div className="modal-video-wrapper" dangerouslySetInnerHTML={{ __html: getControlledEmbed(activeProject.embed_code) }} />
           </div>
         </div>
       )}
