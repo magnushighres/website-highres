@@ -43,23 +43,32 @@ const Portfolio = ({ data }) => {
     loadProjects();
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = activeProject ? 'hidden' : 'auto';
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [activeProject]);
+
   const openModal = (project) => {
     setActiveProject(project);
-    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
   };
 
   const closeModal = () => {
     setActiveProject(null);
-    document.body.style.overflow = 'auto';
   };
 
   return (
     <section className="portfolio" id="work">
       <div className="container">
-        <h2 className="section-title">{data.title_start} <span className="accent">{data.title_accent}</span></h2>
+        <div className="section-heading">
+          <span className="section-kicker">Showreel / selected work</span>
+          <h2 className="section-title">{data.title_start} <span className="accent">{data.title_accent}</span></h2>
+          <p>Motion, 3D og visuelle leveranser bygget for skjerm, scene og kampanje.</p>
+        </div>
         
         {isLoading ? (
-          <p style={{textAlign: 'center', marginTop: '2rem'}}>Laster inn prosjekter...</p>
+          <p className="loading-text">Laster inn prosjekter...</p>
         ) : (
           <div className="portfolio-grid">
             {projects.map((project) => (
@@ -71,8 +80,10 @@ const Portfolio = ({ data }) => {
               >
                 <img src={project.image} alt={project.title} loading="lazy" />
                 <div className="portfolio-overlay">
+                  <span className="portfolio-index">0{project.id}</span>
                   <h3 className="portfolio-title">{project.title}</h3>
                   <span className="portfolio-category">{project.category}</span>
+                  <span className="portfolio-action">Se film</span>
                 </div>
               </div>
             ))}

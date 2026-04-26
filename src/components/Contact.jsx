@@ -6,13 +6,20 @@ const Contact = ({ data }) => {
       <div className="container contact-container">
         <div className="contact-info fade-in-up">
           <h2>{data.heading_start} <span className="accent">{data.heading_accent}</span></h2>
+          <p className="contact-lead">Send en kort brief, en løs idé eller et konkret behov. Jeg svarer med neste steg.</p>
           <div className="info-item">
             <h4>{data.email_label}</h4>
-            <p>{data.email_value}</p>
+            <p><a href={`mailto:${data.email_value}`}>{data.email_value}</a></p>
           </div>
           <div className="info-item">
             <h4>{data.location_label}</h4>
             <p>{data.location_value}</p>
+          </div>
+          <div className="contact-tags" aria-label="Typiske leveranser">
+            <span>Event</span>
+            <span>Reklame</span>
+            <span>SoMe</span>
+            <span>3D/VFX</span>
           </div>
           
 
